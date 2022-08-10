@@ -378,12 +378,12 @@ var player = (function(player) {
   // add properties directly to the player imported object
   player.width     = 60;
   player.height    = 96;
-  player.speed     = 6;
+  player.speed     = 10;
 
   // jumping
   player.gravity   = 1;
   player.dy        = 0;
-  player.jumpDy    = -10;
+  player.jumpDy    = -200;
   player.isFalling = false;
   player.isJumping = false;
 
@@ -714,9 +714,9 @@ function animate() {
     updateEnemies();
 
     // draw the score
-    ctx.fillText('Score: ' + score + 'm', canvas.width - 160, 30);
-    ctx.fillText('Name: ' + 'Chandra Arya', canvas.width - 160, 45);
-    ctx.fillText('Class: ' + 'DevOps online', canvas.width - 160, 60);
+    ctx.fillText('Score: ' + score + 'm', canvas.width - 170, 30);
+    ctx.fillText('Name: ' + 'Mohammed Eid', canvas.width - 170, 45);
+    ctx.fillText('Class: ' + 'DevOps online', canvas.width - 170, 60);
 
     // spawn a new Sprite
     if (ticker % Math.floor(platformWidth / player.speed) === 0) {
